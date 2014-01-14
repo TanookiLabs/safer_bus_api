@@ -1,5 +1,5 @@
 require "safer_bus_api/version"
-require 'duly_noted/configuration'
+require 'safer_bus_api/configuration'
 
 module SaferBusApi
   BASE_URL = 'https://mobile.fmcsa.dot.gov/saferbus/resource/v1/'
