@@ -1,11 +1,12 @@
-# API Docs: https://mobile.fmcsa.dot.gov/developer/apidoc.page?cid=451
-#
-# About API:
-#   The SaferBus API is a RESTful service API provided by FMCSA for the purpose of making available,
-#   the safety performance data of U.S. Department of Transportation (U.S. DOT) registered bus companies.
+require "safer_bus_api/version"
+require 'duly_noted/configuration'
 
-class SaferBusApi
+module SaferBusApi
   BASE_URL = 'https://mobile.fmcsa.dot.gov/saferbus/resource/v1/'
+
+  def configure
+    yield SaferBusApi::Configuration
+  end
 
   def initialize(opts={})
     @dot_number = opts[:dot_number]
@@ -25,7 +26,6 @@ class SaferBusApi
     fetch_data("carriers/#{company_name}")
   end
 
-  # Note: permit.number == dot_number
   def self.query_by_dot_number(dot_number)
     fetch_data("carrier/#{dot_number}")
   end
@@ -35,7 +35,7 @@ class SaferBusApi
   end
 
   def self.fetch_data(url_suffix)
-    url = "#{BASE_URL}#{url_suffix}.json?start=1&size=10&webKey=#{ENV['SAFER_BUS_API_TOKEN']}"
+    url = "#{BASE_URL}#{url_suffix}.json?start=1&size=10&webKey=#{SaferBusApi::Configuration.api_token}"
     response = Typhoeus.get(url)
     return JSON.parse(response.body)
   end
