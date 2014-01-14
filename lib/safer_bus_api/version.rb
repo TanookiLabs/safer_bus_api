@@ -1,3 +1,3 @@
-class SaferBusApi
-  VERSION = "0.0.1"
+module SaferBusApi
+  VERSION = "0.0.2"
 end
