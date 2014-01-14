@@ -11,11 +11,15 @@ gem 'safer_bus_api'
 ```
 
 Then run:
-  $ bundle install
+```
+bundle install
+```
 
 ### Configuration
 
-Set your api_token obtained from registering at [https://mobile.fmcsa.dot.gov/developer/UserAccountCreate.page](https://mobile.fmcsa.dot.gov/developer/UserAccountCreate.page) (Note: Once registered you will be emailed a registration token which you can then use to complete your registration and obtain an api token for your application)
+Set your api_token obtained from registering at [https://mobile.fmcsa.dot.gov/developer/UserAccountCreate.page](https://mobile.fmcsa.dot.gov/developer/UserAccountCreate.page)
+
+Note: Once registered you will be emailed a registration token which you can then use to complete your registration and obtain an api token for your application
 
 
 ```ruby
