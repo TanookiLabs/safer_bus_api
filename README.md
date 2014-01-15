@@ -28,9 +28,32 @@ SaferBusApi.configure do |config|
 end
 ```
 
-## Usage
+## Example Usage
 
+### Query by DOT number:
 
+```ruby
+  request = SaferBusApi::Request.new(dot_number: '44110')
+  response = request.perform
+  response.data # Returns a formatted hash
+  response.raw_data # Returns the raw response from 
+```
+
+### Query by Company Name:
+
+```ruby
+  request = SaferBusApi::Request.new(company_name: 'greyhound') # Note: company name should have no spaces and be all lower case.
+  response = request.perform
+  response.data # Returns a formatted hash
+```
+
+### Query by MC Number:
+
+```ruby
+  request = SaferBusApi::Request.new(mc_number: '1515') # Note: company name should have no spaces and be all lower case.
+  response = request.perform
+  response.data # Returns a formatted hash
+```
 
 ## Author
 [Nathan Bertram](https://github.com/nathanbertram)
