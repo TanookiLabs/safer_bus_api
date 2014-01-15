@@ -17,6 +17,6 @@ Gem::Specification.new do |gem|
   gem.license       = 'MIT'
 
   gem.add_development_dependency('rspec')
-  gem.add_dependency('typhoeus')
+  gem.add_dependency 'typhoeus', '~> 0.6'
 
 end
