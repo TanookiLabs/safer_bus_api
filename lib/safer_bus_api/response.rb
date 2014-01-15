@@ -1,4 +1,4 @@
-module SaferBusApi
+class SaferBusApi
   class Response
     def initialize(raw_data)
       @raw_data = raw_data

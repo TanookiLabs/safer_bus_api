@@ -1,4 +1,4 @@
-module SaferBusApi
+class SaferBusApi
   class Query
     BASE_URL = 'https://mobile.fmcsa.dot.gov/saferbus/resource/v1/'
     
