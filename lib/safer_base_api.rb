@@ -11,5 +11,4 @@ module SaferBusApi
   def configure
     yield SaferBusApi::Configuration
   end
-
 end

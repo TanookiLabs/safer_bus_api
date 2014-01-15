@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/safer_bus_api.png)](http://badge.fury.io/rb/safer_bus_api)
+
 # Overview
 
 The Department of Transportation maintains the SaferBusAPI to provide safety information pertaining to transporation companies.  Information related to this API and instructions for access the API can be found here: [https://mobile.fmcsa.dot.gov/developer/apidescription.page?cid=561](https://mobile.fmcsa.dot.gov/developer/apidescription.page?cid=561)
