@@ -3,7 +3,7 @@ module SaferBusApi
     @data = {:api_token => ''}
 
     def update!(data)
-      data.each do |key, value|
+      @data.each do |key, value|
         self[key] = value
       end
     end

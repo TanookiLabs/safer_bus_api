@@ -9,6 +9,8 @@ require 'safer_bus_api/request'
 require 'safer_bus_api/response'
 
 module SaferBusApi
+  module_function
+
   def configure
     yield SaferBusApi::Configuration
   end
