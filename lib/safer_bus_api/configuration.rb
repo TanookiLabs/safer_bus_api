@@ -1,4 +1,4 @@
-class SaferBusApi
+module SaferBusApi
   class Configuration
     @data = {:api_token => ''}
 

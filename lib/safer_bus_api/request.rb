@@ -1,4 +1,4 @@
-class SaferBusApi
+module SaferBusApi
   class Request
     def initialize(opts={})
       @dot_number = opts[:dot_number]

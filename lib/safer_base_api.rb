@@ -5,7 +5,7 @@ require 'safer_bus_api/query'
 require 'safer_bus_api/request'
 require 'safer_bus_api/response'
 
-class SaferBusApi
+module SaferBusApi
   def configure
     yield SaferBusApi::Configuration
   end

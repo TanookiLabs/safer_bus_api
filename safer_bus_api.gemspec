@@ -16,6 +16,6 @@ Gem::Specification.new do |gem|
   gem.version       = SaferBusApi::VERSION
   gem.license       = 'MIT'
 
-  gem.add_development_dependency('rspec')
+  gem.add_development_dependency 'rspec', '~> 0'
   gem.add_dependency 'typhoeus', '~> 0.6'
 end
