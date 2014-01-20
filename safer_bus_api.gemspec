@@ -1,5 +1,5 @@
-# -*- encoding: utf-8 -*-
-require File.expand_path('../lib/safer_bus_api/version', __FILE__)
+$:.push File.expand_path("../lib", __FILE__)
+require 'safer_bus_api/version'
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Nathan Bertram"]
@@ -8,11 +8,12 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{A simple wrapper for the SaferBusAPI}
   gem.homepage      = "http://github.com/TanookiSuitLabs/safer_bus_api"
 
+  gem.require_path = 'lib'
   gem.files         = `git ls-files`.split($\)
+
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "safer_bus_api"
-  gem.require_path = 'lib'
   gem.version       = SaferBusApi::VERSION
   gem.license       = 'MIT'
 
