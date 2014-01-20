@@ -1,5 +1,7 @@
 module SaferBusApi
   class Configuration
+    module_function
+    
     @data = {:api_token => ''}
 
     def update!(data)
