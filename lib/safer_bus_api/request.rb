@@ -10,16 +10,16 @@ module SaferBusApi
 
     def perform
       if @dot_number.present?
-        @response = SaferBusApi::Query.by_dot_number(@dot_number)
+        raw_response = SaferBusApi::Query.by_dot_number(@dot_number)
       elsif @company_name.present?
-        @response = SaferBusApi::Query.by_company_name(@company_name)
+        raw_response = SaferBusApi::Query.by_company_name(@company_name)
       elsif @mc_number.present?
-        @response = SaferBusApi::Query.by_mc_number(@mc_number)
+        raw_response = SaferBusApi::Query.by_mc_number(@mc_number)
       else
         raise 'SaferBusApi Error: Need to set either a dot_number, company_name or mc_number.' 
       end
 
-      Response.new(@response)
+      @response = Response.new(raw_response)
     end
 
     def response
